@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 40px;
+        }
+
+        .accordion {
+            width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-header {
+            background-color: #f0e3d0;
+            color: #5c3a21;
+            cursor: pointer;
+            padding: 12px;
+            font-weight: bold;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+
+        .accordion-header:hover {
+            background-color: #e5c89b;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 12px;
+            background-color: #fffaf3;
+            color: #3d2b1f;
+        }
+
+        .accordion-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="accordion">
+    <div class="accordion-item">
+        <div class="accordion-header">Розділ 1:</div>
+        <div class="accordion-content">
+            Це перший розділ.
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">Розділ 2:</div>
+        <div class="accordion-content">
+            Це Другий розділ.
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">Розділ 3:</div>
+        <div class="accordion-content">
+            Це фінальний розділ.
+        </div>
+    </div>
+</div>
+<script src="script3.js"></script>
+</body>
+</html>
