@@ -1,5 +1,8 @@
-const m = 5
-const n = 3
+const TABLE_CONFIG = {
+    rows: 5,
+    cols: 3
+};
+
 function renderTable(container, rows, cols) {
     container.appendChild(createTable(rows, cols));
 }
