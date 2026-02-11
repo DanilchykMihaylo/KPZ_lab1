@@ -1,18 +1,25 @@
 const m = 5
 const n = 3
-function createTable(m, n) {
+function renderTable(container, rows, cols) {
+    container.appendChild(createTable(rows, cols));
+}
+
+function createTable(rows, cols) {
     const table = document.createElement('table');
-    for (let i = 0; i < m; i++) {
+
+    for (let i = 0; i < rows; i++) {
         const row = document.createElement('tr');
-        for (let j = 0; j < n; j++) {
-            const cell = document.createElement('td');
-            row.appendChild(cell);
+        for (let j = 0; j < cols; j++) {
+            row.appendChild(document.createElement('td'));
         }
         table.appendChild(row);
     }
 
     return table;
 }
-const container = document.getElementById('tableContainer');
-container.appendChild(createTable(m, n));
+
+// Dependency Injection
+const container = document.getElementById("tableContainer");
+renderTable(container, TABLE_CONFIG.rows, TABLE_CONFIG.cols);
+
 
